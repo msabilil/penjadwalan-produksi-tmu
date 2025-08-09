@@ -1,0 +1,540 @@
+[2025-08-01 02:17:55] [INFO] User login: admin
+[2025-08-01 02:54:30] [INFO] User login: admin
+[2025-08-01 03:39:56] [INFO] User baru ditambahkan: msabilil (ID: 21)
+[2025-08-01 05:22:02] [INFO] User login: admin
+[2025-08-01 05:23:33] [INFO] User login: admin
+[2025-08-01 05:44:22] [INFO] User login: admin
+[2025-08-01 06:09:51] [INFO] User login: admin
+[2025-08-01 06:14:55] [INFO] User dihapus: msabilil (ID: 21)
+[2025-08-01 06:20:53] [INFO] User baru ditambahkan: msabilil (ID: 22)
+[2025-08-01 06:23:34] [INFO] User dihapus: msabilil (ID: 22)
+[2025-08-01 06:24:13] [INFO] User baru ditambahkan: msabilil (ID: 23)
+[2025-08-01 06:25:13] [INFO] User dihapus: msabilil (ID: 23)
+[2025-08-01 06:27:12] [INFO] User baru ditambahkan: msabilil (ID: 24)
+[2025-08-01 06:27:19] [INFO] User dihapus: msabilil (ID: 24)
+[2025-08-02 09:49:25] [INFO] User baru ditambahkan: msabilil (ID: 25)
+[2025-08-02 10:40:56] [INFO] Desain diupdate: Matematika SD 1A (ID: 13)
+[2025-08-02 10:57:20] [INFO] Desain baru ditambahkan: Kalender TMU (ID: 16)
+[2025-08-02 11:09:05] [INFO] Desain baru ditambahkan: Sabilil (ID: 17)
+[2025-08-02 11:17:18] [INFO] Desain diupdate: Kalender TMU (ID: 16)
+[2025-08-02 11:17:42] [INFO] Desain diupdate: Kalender TMU (ID: 16)
+[2025-08-02 11:27:53] [INFO] Desain diupdate: Kalender TMU (ID: 16)
+[2025-08-02 11:47:22] [ERROR] Error update desain: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'file_content' in 'field list'
+[2025-08-02 11:47:28] [ERROR] Error update desain: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'file_content' in 'field list'
+[2025-08-02 11:47:44] [ERROR] Error update desain: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'file_content' in 'field list'
+[2025-08-02 11:57:16] [ERROR] Error update desain: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'file_content' in 'field list'
+[2025-08-02 12:14:21] [INFO] Desain diupdate: Kalender TMU (ID: 16) dengan file baru: bg green.jpg
+[2025-08-02 12:50:32] [INFO] Desain diupdate: Katalog Produk Premium (ID: 15)
+[2025-08-02 13:43:17] [INFO] Desain diupdate: Kalender TMU (ID: 16) dengan file baru: Kelompok 1 - Identitas Budaya dalam Arus Globalisasi Studi Kasus Gaya Berpakaian Anak Muda Indonesia.pdf
+[2025-08-02 13:49:53] [INFO] User login: admin
+[2025-08-02 13:50:24] [INFO] User login: admin
+[2025-08-02 14:02:40] [INFO] Mesin baru ditambahkan: Mesin Aku (ID: 22)
+[2025-08-02 14:03:05] [INFO] Mesin diupdate: Mesin Aku (ID: 22)
+[2025-08-02 14:04:03] [INFO] Desain dihapus: Sabilil (ID: 17)
+[2025-08-02 14:04:12] [INFO] Desain diupdate: Matematika SD 1B (ID: 13)
+[2025-08-02 14:12:43] [INFO] Mesin diupdate: Mesin Aku (ID: 22)
+[2025-08-02 14:13:04] [INFO] Mesin diupdate: Mesin Aku (ID: 22)
+[2025-08-02 14:19:12] [INFO] User dihapus: msabilil (ID: 25)
+[2025-08-02 14:36:06] [INFO] Mesin dihapus: Mesin Aku (ID: 22)
+[2025-08-02 21:43:05] [INFO] Mesin baru ditambahkan: VSK (ID: 23)
+[2025-08-02 21:43:25] [INFO] Mesin dihapus: VSK (ID: 23)
+[2025-08-02 21:44:12] [INFO] Desain baru ditambahkan: da (ID: 18)
+[2025-08-02 21:44:19] [INFO] Desain dihapus: da (ID: 18)
+[2025-08-02 22:12:33] [INFO] User baru ditambahkan: msabilil (ID: 26)
+[2025-08-02 22:12:59] [INFO] Desain diupdate: Kalender TMUa (ID: 16)
+[2025-08-02 22:13:07] [INFO] Desain diupdate: Kalender TMU (ID: 16)
+[2025-08-02 22:13:26] [INFO] Desain diupdate: Katalog Produk Premium (ID: 15) dengan file baru: 1753286531_sertifikat_perpus_univ_muhammad_sablil_fajri_10121160.pdf
+[2025-08-02 22:13:44] [INFO] Desain diupdate: Katalog Produk Premium (ID: 15)
+[2025-08-02 22:31:42] [INFO] Desain baru ditambahkan: sabilil (ID: 19)
+[2025-08-02 23:25:56] [INFO] Mesin baru ditambahkan: asd (ID: 24)
+[2025-08-02 23:26:38] [INFO] Mesin baru ditambahkan: qewq (ID: 25)
+[2025-08-02 23:26:57] [INFO] Mesin baru ditambahkan: ad2 (ID: 26)
+[2025-08-02 23:27:17] [INFO] Mesin baru ditambahkan: dsa (ID: 27)
+[2025-08-02 23:27:36] [INFO] Mesin baru ditambahkan: 213 (ID: 28)
+[2025-08-02 23:34:05] [INFO] User dihapus: msabilil (ID: 26)
+[2025-08-02 23:34:22] [INFO] Desain diupdate: sabilil (ID: 19)
+[2025-08-02 23:34:41] [INFO] Desain dihapus: sabilil (ID: 19)
+[2025-08-02 23:34:54] [INFO] Mesin diupdate: asdfsa (ID: 24)
+[2025-08-02 23:34:59] [INFO] Mesin dihapus: asdfsa (ID: 24)
+[2025-08-02 23:38:37] [INFO] User login: admin
+[2025-08-03 00:00:36] [INFO] User login: staf
+[2025-08-03 10:34:04] [WARNING] Login gagal untuk user: staf
+[2025-08-03 10:34:09] [INFO] User login: staf
+[2025-08-03 10:53:51] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'no_telepon' in 'field list'
+[2025-08-03 10:54:28] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'no_telepon' in 'field list'
+[2025-08-03 11:01:33] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'no_telepon' in 'field list'
+[2025-08-03 11:02:11] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'no_telepon' in 'field list'
+[2025-08-03 11:06:09] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'alamat' in 'field list'
+[2025-08-03 11:07:07] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'alamat' in 'field list'
+[2025-08-03 11:10:19] [INFO] Pesanan baru ditambahkan: PO/2024/01 (ID: 1)
+[2025-08-03 11:13:25] [INFO] Pesanan dihapus: PO/2024/01 (ID: 1)
+[2025-08-03 11:20:18] [INFO] Pesanan baru ditambahkan: PO/2024/01 (ID: 2)
+[2025-08-03 12:00:18] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jenis_produk_baru' in 'field list'
+[2025-08-03 12:01:16] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jenis_produk_baru' in 'field list'
+[2025-08-03 12:02:08] [ERROR] Error tambah pesanan: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jenis_produk_baru' in 'field list'
+[2025-08-03 12:18:31] [ERROR] Error tambah pesanan: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PO/2024/01' for key 'pesanan.no'
+[2025-08-03 12:19:27] [ERROR] Error tambah pesanan: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PO/2024/01' for key 'pesanan.no'
+[2025-08-03 12:33:59] [ERROR] Error tambah pesanan: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PO/2024/01' for key 'pesanan.no'
+[2025-08-03 12:36:14] [ERROR] Error tambah pesanan: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PO/2024/01' for key 'pesanan.no'
+[2025-08-03 12:36:37] [ERROR] Error tambah pesanan: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PO/2024/01' for key 'pesanan.no'
+[2025-08-03 12:38:48] [ERROR] Error tambah pesanan: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PO/2024/01' for key 'pesanan.no'
+[2025-08-03 12:39:04] [ERROR] Error tambah pesanan: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PO/2024/01' for key 'pesanan.no'
+[2025-08-03 12:41:22] [INFO] Pesanan baru ditambahkan: PO/2024/01-1 (ID: 10)
+[2025-08-03 12:42:33] [INFO] Pesanan baru ditambahkan: PO/2024/01-2 (ID: 11)
+[2025-08-03 12:46:35] [INFO] Pesanan baru ditambahkan: PO/2024/01-3 (ID: 12)
+[2025-08-03 12:46:44] [INFO] Pesanan dihapus: PO/2024/01-3 (ID: 12)
+[2025-08-03 12:46:48] [INFO] Pesanan dihapus: PO/2024/01-2 (ID: 11)
+[2025-08-03 12:46:52] [INFO] Pesanan dihapus: PO/2024/01-1 (ID: 10)
+[2025-08-03 12:47:12] [INFO] Pesanan baru ditambahkan: PO/2024/02 (ID: 13)
+[2025-08-03 12:47:20] [INFO] Pesanan baru ditambahkan: PO/2024/02-1 (ID: 14)
+[2025-08-03 12:50:01] [INFO] Pesanan dihapus: PO/2024/02-1 (ID: 14)
+[2025-08-03 13:49:30] [INFO] Pesanan baru ditambahkan: PO/2025/00001 (ID: 15)
+[2025-08-03 13:53:25] [INFO] Pesanan baru ditambahkan: PO/2025/00002 (ID: 16)
+[2025-08-03 13:57:23] [INFO] Pesanan baru ditambahkan: PO/2025/00003 (ID: 17)
+[2025-08-03 14:01:51] [INFO] Pesanan dihapus: PO/2024/02 (ID: 13)
+[2025-08-03 14:01:56] [INFO] Pesanan dihapus: PO/2024/01 (ID: 2)
+[2025-08-03 14:03:20] [INFO] Pesanan diupdate: PO/2024/00001 (ID: 15)
+[2025-08-03 14:09:39] [INFO] User login: admin
+[2025-08-03 14:11:21] [INFO] User login: staf
+[2025-08-03 14:16:05] [INFO] User login: manager
+[2025-08-03 14:51:25] [INFO] Desain diupdate: Kalender TMUa (ID: 16)
+[2025-08-03 15:06:57] [INFO] Desain diupdate: Kalender TMU (ID: 16)
+[2025-08-03 15:07:53] [INFO] User login: staf
+[2025-08-03 16:28:50] [INFO] User login: manager
+[2025-08-04 01:12:56] [INFO] Desain baru ditambahkan: Bahasa Indonesia 1A (ID: 20) dengan file: po 1.pdf
+[2025-08-04 01:19:21] [INFO] Desain dihapus: Katalog Produk Premium (ID: 15)
+[2025-08-04 09:10:39] [INFO] User login: staf
+[2025-08-04 09:11:09] [INFO] User login: admin
+[2025-08-04 09:17:25] [INFO] User baru ditambahkan: msabilil (ID: 27)
+[2025-08-04 09:17:31] [INFO] User dihapus: msabilil (ID: 27)
+[2025-08-04 18:23:11] [INFO] User login: staf
+[2025-08-04 20:34:08] [INFO] User login: supervisor
+[2025-08-04 22:28:45] [ERROR] Error hitung estimasi otomatis: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auto_calculate' in 'field list'
+[2025-08-04 22:35:50] [INFO] Estimasi dihitung ulang (ID: 3) dengan parameter custom
+[2025-08-04 22:38:29] [INFO] Estimasi dihitung ulang (ID: 3) dengan parameter custom
+[2025-08-04 22:52:32] [INFO] Estimasi dihitung ulang (ID: 3) dengan parameter custom
+[2025-08-04 22:53:13] [INFO] Estimasi dihitung ulang (ID: 3) dengan parameter custom
+[2025-08-04 23:07:19] [INFO] Estimasi dihitung ulang (ID: 2) dengan parameter custom
+[2025-08-04 23:08:50] [INFO] Estimasi dihitung ulang (ID: 4) dengan parameter custom
+[2025-08-04 23:09:52] [INFO] Estimasi dihitung ulang (ID: 4) dengan parameter custom
+[2025-08-04 23:15:22] [INFO] Estimasi dihitung ulang (ID: 4) dengan parameter custom
+[2025-08-04 23:15:58] [INFO] Estimasi dihitung ulang (ID: 4) dengan parameter custom
+[2025-08-04 23:17:25] [INFO] Estimasi dihitung ulang (ID: 4) dengan parameter custom
+[2025-08-04 23:17:44] [INFO] Estimasi dihitung ulang (ID: 3) dengan parameter custom
+[2025-08-04 23:19:57] [INFO] Estimasi dihitung ulang (ID: 2) dengan parameter custom
+[2025-08-04 23:24:38] [INFO] Estimasi dihitung ulang (ID: 4) dengan parameter custom
+[2025-08-04 23:24:58] [INFO] Estimasi dihitung ulang (ID: 4) dengan parameter custom
+[2025-08-05 00:06:18] [INFO] Estimasi dihitung ulang (ID: 5) dengan parameter custom
+[2025-08-05 00:30:51] [ERROR] Error recalculate estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nama' in 'field list'
+[2025-08-05 00:37:45] [INFO] Estimasi dihitung ulang (ID: 6) dengan parameter custom
+[2025-08-05 00:45:18] [INFO] Estimasi dihitung ulang (ID: 6) dengan parameter custom
+[2025-08-05 00:45:24] [INFO] Estimasi dihitung ulang (ID: 5) dengan parameter custom
+[2025-08-05 00:51:36] [INFO] User login: staf
+[2025-08-05 00:52:37] [INFO] Pesanan baru ditambahkan: PO/2025/00004 (ID: 18)
+[2025-08-05 00:52:59] [INFO] User login: manager
+[2025-08-05 00:55:02] [INFO] Desain baru ditambahkan: Mewarnai Sayuran (ID: 21) dengan file: 1739-6396-1-PB.pdf
+[2025-08-05 00:55:28] [INFO] Pesanan diupdate: PO/2025/00004 (ID: 18)
+[2025-08-05 00:55:50] [INFO] User login: supervisor
+[2025-08-05 01:33:42] [INFO] Estimasi dihitung ulang (ID: 7) dengan parameter custom
+[2025-08-05 01:50:49] [INFO] Estimasi dihitung ulang (ID: 7) dengan parameter custom
+[2025-08-05 02:11:29] [INFO] Estimasi dihitung ulang (ID: 7) dengan parameter custom
+[2025-08-05 02:29:51] [INFO] Estimasi dihitung ulang (ID: 7) dengan parameter custom
+[2025-08-05 02:30:01] [INFO] Estimasi dihitung ulang (ID: 6) dengan parameter custom
+[2025-08-05 02:30:10] [INFO] Estimasi dihitung ulang (ID: 5) dengan parameter custom
+[2025-08-05 02:56:50] [INFO] Estimasi difinalisasi dan siap dijadwalkan (ID: 7)
+[2025-08-05 05:12:48] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:12:48] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:12:49] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:12:49] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:13:50] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:13:50] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:14:37] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:14:37] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:17:30] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:17:30] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:17:33] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:17:33] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:17:35] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:17:35] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:17:41] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:17:41] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:22:38] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:22:38] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:23:06] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:23:06] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:24:19] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:24:19] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:24:52] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:24:52] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:26:29] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:26:29] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:26:50] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:26:50] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:27:32] [ERROR] Error in ambil_estimasi_siap_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:27:32] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:33:36] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 05:43:13] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:05:22] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:05:23] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:05:39] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:05:51] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:05:53] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:06:16] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:06:24] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:06:44] [ERROR] Error tambah jadwal produksi: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'tanggal_mulai' at row 1
+[2025-08-05 06:06:44] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:06:51] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:07:19] [INFO] Jadwal produksi baru ditambahkan: JDW202508056495 (ID: 1)
+[2025-08-05 06:07:19] [ERROR] Error in generate_detail_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_setup' in 'field list'
+[2025-08-05 06:07:19] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:10:05] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:10:39] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:11:01] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:11:05] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:11:33] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:11:44] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:12:08] [ERROR] Error in urutkan_jadwal_harian: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:12:08] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:13:21] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:13:27] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:13:53] [INFO] Jadwal produksi baru ditambahkan: JDW202508050966 (ID: 2)
+[2025-08-05 06:13:53] [ERROR] Error in generate_detail_jadwal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 06:13:53] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:15:18] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:15:27] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:15:56] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:16:00] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:16:07] [INFO] Jadwal produksi baru ditambahkan: JDW202508051022 (ID: 3)
+[2025-08-05 06:16:07] [INFO] Detail jadwal berhasil di-generate untuk jadwal ID: 3
+[2025-08-05 06:16:07] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:16:19] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:18:24] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:20:19] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:23:56] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:23:57] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:24:05] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:26:48] [ERROR] Error in ambil_semua_jadwal_simple: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:26:48] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:26:48] [INFO] DEBUG: Jadwal result success = false
+[2025-08-05 06:26:48] [INFO] DEBUG: Jadwal list count = 0
+[2025-08-05 06:27:17] [ERROR] Error ambil jadwal by tanggal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:27:17] [INFO] DEBUG: Filter tanggal = 2025-08-05, Filter status = 
+[2025-08-05 06:27:17] [INFO] DEBUG: Jadwal result success = false
+[2025-08-05 06:27:17] [INFO] DEBUG: Jadwal list count = 0
+[2025-08-05 06:27:23] [ERROR] Error in ambil_semua_jadwal_simple: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e.waktu_standar_hari' in 'field list'
+[2025-08-05 06:27:23] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:27:23] [INFO] DEBUG: Jadwal result success = false
+[2025-08-05 06:27:23] [INFO] DEBUG: Jadwal list count = 0
+[2025-08-05 06:30:05] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:30:05] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:30:05] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:30:05] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:30:09] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:30:09] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:30:09] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:30:09] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:30:53] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:30:53] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:30:53] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:30:53] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:44:17] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:44:17] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:44:17] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:44:17] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:44:30] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:44:59] [INFO] Jadwal produksi baru ditambahkan: JDW202508055795 (ID: 4)
+[2025-08-05 06:44:59] [INFO] Detail jadwal berhasil di-generate untuk jadwal ID: 4
+[2025-08-05 06:44:59] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:44:59] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:44:59] [INFO] DEBUG: Jadwal list count = 2
+[2025-08-05 06:44:59] [INFO] DEBUG: First jadwal data = {"id_jadwal":4,"id_estimasi":6,"id_mesin":2,"no_jadwal":"JDW202508055795","batch_ke":1,"jumlah_batch_ini":123,"tanggal_mulai":"2025-08-07 00:00:00","tanggal_selesai":"2025-08-11 00:00:00","status":"terjadwal","waktu_standar_hari":"3.32","nama_pemesan":"John Doe","jumlah":123,"judul_desain":"Kalender TMU","jenis_produk":"kalender","total_batch":1}
+[2025-08-05 06:46:16] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:46:16] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:46:16] [INFO] DEBUG: Jadwal list count = 2
+[2025-08-05 06:46:16] [INFO] DEBUG: First jadwal data = {"id_jadwal":4,"id_estimasi":6,"id_mesin":2,"no_jadwal":"JDW202508055795","batch_ke":1,"jumlah_batch_ini":123,"tanggal_mulai":"2025-08-07 00:00:00","tanggal_selesai":"2025-08-11 00:00:00","status":"terjadwal","waktu_standar_hari":"3.32","nama_pemesan":"John Doe","jumlah":123,"judul_desain":"Kalender TMU","jenis_produk":"kalender","total_batch":1}
+[2025-08-05 06:46:30] [INFO] Jadwal produksi dihapus: JDW202508055795 (ID: 4)
+[2025-08-05 06:46:30] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:46:30] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:46:30] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:46:30] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:46:34] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:46:39] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:46:39] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:46:39] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:46:39] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:46:53] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:47:11] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:47:11] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:47:11] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:47:11] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:47:17] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:47:33] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:47:33] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:47:33] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:47:33] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:47:43] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:48:28] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:48:28] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:48:28] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:48:28] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:48:36] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:48:53] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:48:53] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:48:53] [INFO] DEBUG: Jadwal list count = 1
+[2025-08-05 06:48:53] [INFO] DEBUG: First jadwal data = {"id_jadwal":3,"id_estimasi":5,"id_mesin":2,"no_jadwal":"JDW202508051022","batch_ke":1,"jumlah_batch_ini":12,"tanggal_mulai":"2025-08-04 00:00:00","tanggal_selesai":"2025-08-06 00:00:00","status":"terjadwal","waktu_standar_hari":"1.70","nama_pemesan":"John Doe","jumlah":12,"judul_desain":"Matematika SD 1B","jenis_produk":"buku","total_batch":1}
+[2025-08-05 06:49:05] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 06:49:22] [INFO] Jadwal produksi baru ditambahkan: JDW202508057648 (ID: 5)
+[2025-08-05 06:49:22] [INFO] Detail jadwal berhasil di-generate untuk jadwal ID: 5
+[2025-08-05 06:49:22] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:49:22] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:49:22] [INFO] DEBUG: Jadwal list count = 2
+[2025-08-05 06:49:22] [INFO] DEBUG: First jadwal data = {"id_jadwal":5,"id_estimasi":6,"id_mesin":2,"no_jadwal":"JDW202508057648","batch_ke":1,"jumlah_batch_ini":123,"tanggal_mulai":"2025-08-07 00:00:00","tanggal_selesai":"2025-08-11 00:00:00","status":"terjadwal","waktu_standar_hari":"3.32","nama_pemesan":"John Doe","jumlah":123,"judul_desain":"Kalender TMU","jenis_produk":"kalender","total_batch":1}
+[2025-08-05 06:49:41] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 06:49:41] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 06:49:41] [INFO] DEBUG: Jadwal list count = 2
+[2025-08-05 06:49:41] [INFO] DEBUG: First jadwal data = {"id_jadwal":5,"id_estimasi":6,"id_mesin":2,"no_jadwal":"JDW202508057648","batch_ke":1,"jumlah_batch_ini":123,"tanggal_mulai":"2025-08-07 00:00:00","tanggal_selesai":"2025-08-11 00:00:00","status":"terjadwal","waktu_standar_hari":"3.32","nama_pemesan":"John Doe","jumlah":123,"judul_desain":"Kalender TMU","jenis_produk":"kalender","total_batch":1}
+[2025-08-05 06:50:49] [INFO] User login: admin
+[2025-08-05 06:51:22] [INFO] User dihapus: supervisor (ID: 20)
+[2025-08-05 06:52:24] [INFO] User baru ditambahkan: supervisor (ID: 28)
+[2025-08-05 07:01:44] [INFO] Mesin dihapus: qewq (ID: 25)
+[2025-08-05 07:02:30] [INFO] User login: staf
+[2025-08-05 07:05:07] [INFO] Pesanan baru ditambahkan: PO/2025/00005 (ID: 19)
+[2025-08-05 09:12:11] [INFO] User login: admin
+[2025-08-05 09:12:42] [INFO] User login: staf
+[2025-08-05 09:14:38] [INFO] Pesanan baru ditambahkan: PO/2025/00006 (ID: 20)
+[2025-08-05 09:16:29] [INFO] User login: supervisor
+[2025-08-05 09:23:54] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 09:23:54] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 09:23:54] [INFO] DEBUG: Jadwal list count = 2
+[2025-08-05 09:23:54] [INFO] DEBUG: First jadwal data = {"id_jadwal":5,"id_estimasi":6,"id_mesin":2,"no_jadwal":"JDW202508057648","batch_ke":1,"jumlah_batch_ini":123,"tanggal_mulai":"2025-08-07 00:00:00","tanggal_selesai":"2025-08-11 00:00:00","status":"terjadwal","waktu_standar_hari":"3.32","nama_pemesan":"John Doe","jumlah":123,"judul_desain":"Kalender TMU","jenis_produk":"kalender","total_batch":1}
+[2025-08-05 09:27:27] [ERROR] Error in ambil_mesin_sesuai_spesifikasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipe_mesin' in 'field list'
+[2025-08-05 09:28:47] [INFO] Jadwal produksi baru ditambahkan: JDW202508055594 (ID: 6)
+[2025-08-05 09:28:47] [INFO] Detail jadwal berhasil di-generate untuk jadwal ID: 6
+[2025-08-05 09:28:47] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 09:28:47] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 09:28:47] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-05 09:28:47] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-05 13:51:10] [INFO] User login: staf
+[2025-08-05 13:51:35] [INFO] Pesanan diupdate: PO/2025/00006 (ID: 20)
+[2025-08-05 13:52:31] [INFO] Estimasi otomatis berhasil dihitung untuk pesanan ID: 21 (Estimasi ID: 10)
+[2025-08-05 13:52:31] [INFO] Pesanan baru ditambahkan: PO/2025/00007 (ID: 21)
+[2025-08-05 13:52:56] [INFO] User login: supervisor
+[2025-08-05 13:56:19] [INFO] User login: manager
+[2025-08-05 13:56:59] [INFO] Desain diupdate: Majalah Fashion Fullcolor (ID: 14) dengan file baru: 46-572-2-PB.pdf
+[2025-08-05 13:57:15] [INFO] User login: supervisor
+[2025-08-05 20:09:28] [INFO] Generated missing estimation for order ID: 20
+[2025-08-05 21:54:03] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 21:54:03] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 21:54:03] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-05 21:54:03] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-05 21:57:12] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 21:57:12] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 21:57:12] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-05 21:57:12] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-05 22:11:04] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 22:11:04] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 22:11:04] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-05 22:11:04] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-05 22:19:18] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 22:22:13] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 22:25:50] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 22:25:50] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 22:25:50] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-05 22:25:50] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-05 22:26:43] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-05 22:26:43] [INFO] DEBUG: Jadwal result success = true
+[2025-08-05 22:26:43] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-05 22:26:43] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-05 22:27:06] [INFO] User login: supervisor
+[2025-08-05 22:27:08] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 22:38:56] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 22:40:28] [INFO] User login: admin
+[2025-08-05 22:40:48] [INFO] User login: staf
+[2025-08-05 22:48:10] [INFO] User login: admin
+[2025-08-05 22:51:58] [INFO] User login: admin
+[2025-08-05 22:53:38] [INFO] User login: supervisor
+[2025-08-05 22:53:40] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 22:54:03] [INFO] User login: staf
+[2025-08-05 22:58:12] [INFO] User login: admin
+[2025-08-05 23:05:24] [INFO] User login: admin
+[2025-08-05 23:07:20] [INFO] User login: staf
+[2025-08-05 23:35:27] [INFO] User login: supervisor
+[2025-08-05 23:35:29] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 23:37:04] [INFO] User login: staf
+[2025-08-05 23:39:46] [INFO] User login: supervisor
+[2025-08-05 23:39:47] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 23:40:18] [INFO] User login: manager
+[2025-08-05 23:55:01] [INFO] User login: staf
+[2025-08-05 23:55:23] [INFO] User login: supervisor
+[2025-08-05 23:55:24] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-05 23:56:04] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-06 13:31:49] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-06 13:32:13] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-06 13:51:10] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-06 13:54:28] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-06 14:11:56] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-06 14:11:59] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-06 14:11:59] [INFO] DEBUG: Jadwal result success = true
+[2025-08-06 14:11:59] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-06 14:11:59] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-06 14:12:59] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-06 14:12:59] [INFO] DEBUG: Jadwal result success = true
+[2025-08-06 14:12:59] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-06 14:12:59] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-06 14:13:04] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-06 14:13:12] [INFO] User login: admin
+[2025-08-06 14:13:31] [INFO] User login: staf
+[2025-08-06 14:13:45] [INFO] User login: manager
+[2025-08-07 08:20:16] [INFO] User login: admin
+[2025-08-07 08:40:26] [INFO] User login: admin
+[2025-08-07 08:48:28] [INFO] User baru ditambahkan: sabil (ID: 29)
+[2025-08-07 08:48:41] [INFO] User dihapus: sabil (ID: 29)
+[2025-08-07 08:50:24] [INFO] Desain baru ditambahkan: Bahasa Indonesia Kurikulum Merdeka (ID: 22) dengan file: keuangan_10121160.pdf
+[2025-08-07 08:51:50] [INFO] Desain diupdate: Bahasa Indonesia Kurikulum (ID: 22)
+[2025-08-07 08:52:00] [INFO] Desain dihapus: Bahasa Indonesia Kurikulum (ID: 22)
+[2025-08-07 08:53:19] [INFO] Mesin diupdate: A001 (ID: 26)
+[2025-08-07 08:53:24] [INFO] Mesin dihapus: A001 (ID: 26)
+[2025-08-07 08:54:05] [INFO] Mesin baru ditambahkan: Offset (ID: 29)
+[2025-08-07 08:54:16] [INFO] Mesin dihapus: Offset (ID: 29)
+[2025-08-07 08:54:21] [INFO] Mesin dihapus: dsa (ID: 27)
+[2025-08-07 08:54:26] [INFO] Mesin dihapus: 213 (ID: 28)
+[2025-08-07 08:54:40] [INFO] User login: staf
+[2025-08-07 09:04:28] [INFO] User login: admin
+[2025-08-07 09:04:52] [INFO] User login: manager
+[2025-08-07 09:13:50] [INFO] Desain diupdate: Bahasa Indonesia 2A (ID: 20)
+[2025-08-07 09:15:15] [INFO] User login: staf
+[2025-08-07 10:23:07] [INFO] Estimasi otomatis berhasil dihitung untuk pesanan ID: 22 (Estimasi ID: 12)
+[2025-08-07 10:23:07] [INFO] Pesanan baru ditambahkan: PO/2025/00008 (ID: 22)
+[2025-08-07 10:23:28] [INFO] Pesanan diupdate: PO/2025/00008 (ID: 22)
+[2025-08-07 10:25:33] [INFO] User login: supervisor
+[2025-08-07 10:25:35] [ERROR] Error hitung statistik estimasi: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list'
+[2025-08-07 10:27:08] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-07 10:27:08] [INFO] DEBUG: Jadwal result success = true
+[2025-08-07 10:27:08] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-07 10:27:08] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-07 10:27:18] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-07 10:27:18] [INFO] DEBUG: Jadwal result success = true
+[2025-08-07 10:27:18] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-07 10:27:18] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-07 10:27:27] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-07 10:27:27] [INFO] DEBUG: Jadwal result success = true
+[2025-08-07 10:27:27] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-07 10:27:27] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-07 10:27:59] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-07 10:27:59] [INFO] DEBUG: Jadwal result success = true
+[2025-08-07 10:27:59] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-07 10:27:59] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-07 10:32:44] [INFO] User login: staf
+[2025-08-07 10:55:00] [INFO] User login: admin
+[2025-08-07 10:55:28] [INFO] User baru ditambahkan: sabil (ID: 30)
+[2025-08-07 10:55:43] [INFO] User dihapus: sabil (ID: 30)
+[2025-08-07 10:56:46] [INFO] Desain baru ditambahkan: Bahasa Indonesia 1A (ID: 23) dengan file: Pesanan 1.pdf
+[2025-08-07 10:57:05] [INFO] Desain diupdate: Bahasa Indonesia 1A (ID: 23)
+[2025-08-07 10:57:17] [INFO] Desain dihapus: Bahasa Indonesia 1A (ID: 23)
+[2025-08-07 10:57:49] [INFO] Mesin baru ditambahkan: Mesin Offset (ID: 30)
+[2025-08-07 10:58:22] [INFO] Mesin diupdate: Mesin Offset (ID: 30)
+[2025-08-07 10:58:29] [INFO] Mesin dihapus: Mesin Offset (ID: 30)
+[2025-08-07 11:04:50] [INFO] User baru ditambahkan: sabil (ID: 31)
+[2025-08-07 11:13:54] [INFO] User dihapus: sabil (ID: 31)
+[2025-08-07 11:15:55] [INFO] User baru ditambahkan: sabil (ID: 32)
+[2025-08-07 11:20:05] [INFO] User dihapus: sabil (ID: 32)
+[2025-08-07 11:20:55] [INFO] User baru ditambahkan: sabil (ID: 33)
+[2025-08-07 11:21:04] [INFO] User dihapus: sabil (ID: 33)
+[2025-08-07 11:21:47] [INFO] Desain baru ditambahkan: Bahasa Indonesia 1A (ID: 24) dengan file: Pesanan 1.pdf
+[2025-08-07 11:22:01] [INFO] Desain diupdate: Bahasa Indonesia 1B (ID: 24)
+[2025-08-07 11:22:29] [INFO] Desain dihapus: Bahasa Indonesia 1B (ID: 24)
+[2025-08-07 11:22:58] [INFO] Mesin baru ditambahkan: Mesin Offset (ID: 31)
+[2025-08-07 11:23:14] [INFO] Mesin diupdate: Mesin Offset (ID: 31)
+[2025-08-07 11:23:37] [INFO] Mesin dihapus: Mesin Offset (ID: 31)
+[2025-08-07 11:24:13] [INFO] User login: staf
+[2025-08-07 11:29:14] [INFO] User login: admin
+[2025-08-07 11:30:02] [INFO] Desain diupdate: Matematika SD 1B (ID: 13) dengan file baru: SKRIPSI Revisi Seminar.pdf
+[2025-08-07 11:30:03] [INFO] Desain diupdate: Matematika SD 1B (ID: 13) dengan file baru: SKRIPSI Revisi Seminar.pdf
+[2025-08-07 11:30:30] [WARNING] Login gagal untuk user: staf
+[2025-08-07 11:30:36] [INFO] User login: staf
+[2025-08-07 12:19:52] [INFO] User login: manager
+[2025-08-07 12:21:08] [INFO] Desain baru ditambahkan: Bahasa Indonesia 1A (ID: 25) dengan file: po 1 (3).pdf
+[2025-08-07 12:21:22] [INFO] Desain diupdate: Bahasa Indonesia 1A (ID: 25)
+[2025-08-07 12:21:28] [INFO] Desain dihapus: Bahasa Indonesia 1A (ID: 25)
+[2025-08-07 13:11:47] [INFO] User login: staf
+[2025-08-07 13:15:13] [INFO] User login: staf
+[2025-08-07 13:16:28] [INFO] Estimasi otomatis berhasil dihitung untuk pesanan ID: 23 (Estimasi ID: 13)
+[2025-08-07 13:16:28] [INFO] Pesanan baru ditambahkan: PO/2025/00009 (ID: 23)
+[2025-08-07 13:18:53] [INFO] Pesanan diupdate: PO/2025/00009 (ID: 23)
+[2025-08-07 13:46:47] [INFO] User login: manager
+[2025-08-07 13:48:06] [INFO] User login: staf
+[2025-08-09 17:38:45] [INFO] User login: supervisor
+[2025-08-09 17:48:56] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:49:12] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:49:12] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:49:14] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:49:14] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:49:15] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:49:15] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:49:18] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:49:18] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:51:11] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:51:11] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:51:29] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:51:29] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:51:34] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:51:34] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:51:45] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:51:45] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:52:13] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:52:13] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:54:40] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:54:40] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:57:23] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:57:23] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:58:59] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:58:59] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:59:08] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 17:59:08] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:00:29] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:00:29] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:00:36] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:00:36] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:00:45] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:00:45] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:00:52] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:00:52] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:18:01] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:18:01] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:18:08] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:18:08] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:18:31] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:18:31] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:19:21] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:19:21] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:19:26] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:19:26] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:49:38] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 18:49:38] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 19:10:39] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 19:10:39] [INFO] DEBUG: Jadwal result success = true
+[2025-08-09 19:10:39] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-09 19:10:39] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-09 19:10:53] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 19:10:53] [INFO] DEBUG: Jadwal result success = true
+[2025-08-09 19:10:53] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-09 19:10:53] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-09 19:10:54] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 19:10:54] [INFO] DEBUG: Jadwal result success = true
+[2025-08-09 19:10:54] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-09 19:10:54] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-09 19:10:56] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 19:10:56] [INFO] DEBUG: Jadwal result success = true
+[2025-08-09 19:10:56] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-09 19:10:56] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-09 19:10:56] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 19:10:56] [INFO] DEBUG: Jadwal result success = true
+[2025-08-09 19:10:56] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-09 19:10:56] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-09 19:10:57] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 19:10:57] [INFO] DEBUG: Jadwal result success = true
+[2025-08-09 19:10:57] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-09 19:10:57] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-09 19:11:04] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 19:11:04] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 19:11:04] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
