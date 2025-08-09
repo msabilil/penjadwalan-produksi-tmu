@@ -538,3 +538,17 @@
 [2025-08-09 19:11:04] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
 [2025-08-09 19:11:04] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
 [2025-08-09 19:11:04] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 21:12:14] [INFO] User login: supervisor
+[2025-08-09 21:13:09] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 21:13:09] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 21:13:09] [ERROR] Error ambil estimasi by filter: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'd.judul_produk' in 'field list'
+[2025-08-09 21:40:49] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 21:40:49] [INFO] DEBUG: Jadwal result success = true
+[2025-08-09 21:40:49] [INFO] DEBUG: Jadwal list count = 3
+[2025-08-09 21:40:49] [INFO] DEBUG: First jadwal data = {"id_jadwal":6,"id_estimasi":9,"id_mesin":2,"no_jadwal":"JDW202508055594","batch_ke":1,"jumlah_batch_ini":100,"tanggal_mulai":"2025-08-12 00:00:00","tanggal_selesai":"2025-08-13 00:00:00","status":"terjadwal","waktu_standar_hari":"0.49","nama_pemesan":"John Doe","jumlah":100,"judul_desain":"Majalah Fashion Fullcolor","jenis_produk":"majalah","total_batch":1}
+[2025-08-09 23:26:39] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 23:26:39] [INFO] DEBUG: Jadwal result success = false
+[2025-08-09 23:26:39] [INFO] DEBUG: Jadwal list count = 0
+[2025-08-09 23:30:21] [INFO] DEBUG: Filter tanggal = , Filter status = 
+[2025-08-09 23:30:21] [INFO] DEBUG: Jadwal result success = true
+[2025-08-09 23:30:21] [INFO] DEBUG: Jadwal list count = 0

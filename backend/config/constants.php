@@ -1,6 +1,6 @@
 <?php
 // Database Configuration Constants
-define('DB_HOST', 'localhost');
+define('DB_HOST', '153.92.15.31');
 define('DB_NAME', 'u760848756_penjadwalan');
 define('DB_USER', 'u760848756_tmu'); // Sesuaikan dengan kredensial database Anda
 define('DB_PASS', '!n6prJ|B'); // Sesuaikan dengan kredensial database Anda
@@ -23,6 +23,7 @@ define('WAKTU_STANDAR_QC_DEFAULT', 2.0);
 define('WAKTU_STANDAR_PACKING_DEFAULT', 5.0);
 define('JUMLAH_HALAMAN_PER_PLAT_DEFAULT', 8);
 define('KAPASITAS_BOX_DEFAULT', 40);
+define('KAPASITAS_PER_HARI', 800);
 
 // User Roles
 define('ROLE_ADMINISTRATOR', 'administrator');
