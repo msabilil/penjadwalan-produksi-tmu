@@ -44,11 +44,11 @@ function tambah_estimasi($data) {
             return ['success' => false, 'message' => 'Estimasi untuk pesanan ini sudah ada'];
         }
         
-        // Insert estimasi baru
+        // Insert estimasi baru (menyertakan tanggal_estimasi_selesai jika disediakan)
         $query = "INSERT INTO estimasi (
             id_pesanan, waktu_desain, waktu_plat, waktu_total_setup, waktu_mesin,
-            waktu_qc, waktu_packing, waktu_menit, waktu_jam, waktu_hari, tanggal_estimasi
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            waktu_qc, waktu_packing, waktu_menit, waktu_jam, waktu_hari, tanggal_estimasi, tanggal_estimasi_selesai
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         $stmt = $pdo->prepare($query);
         $stmt->execute([
@@ -62,7 +62,8 @@ function tambah_estimasi($data) {
             $data['waktu_menit'] ?? 0,
             $data['waktu_jam'] ?? 0,
             $data['waktu_hari'] ?? 0,
-            $data['tanggal_estimasi'] ?? date('Y-m-d')
+            $data['tanggal_estimasi'] ?? date('Y-m-d'),
+            $data['tanggal_estimasi_selesai'] ?? null
         ]);
         
         $estimasi_id = $pdo->lastInsertId();
@@ -393,10 +394,11 @@ function hitung_estimasi_otomatis($id_pesanan, $custom_config = []) {
     }
     
     try {
-        // Ambil data pesanan dan desain dengan spesifikasi lengkap
+        // Ambil data pesanan dan desain dengan spesifikasi lengkap (tambahkan tanggal_pesanan)
         $query = "
             SELECT 
                 p.jumlah,
+                p.tanggal_pesanan,
                 d.estimasi_waktu_desain,
                 d.halaman,
                 d.jumlah_warna,
@@ -546,16 +548,19 @@ function hitung_estimasi_otomatis($id_pesanan, $custom_config = []) {
         $waktu_jam = $waktu_menit / 60;
         $waktu_hari = $waktu_jam / 8;
         
+        // Hitung tanggal estimasi selesai dari tanggal_pesanan + ceil(waktu_hari)
+        $tanggal_estimasi_selesai = hitung_tanggal_estimasi_selesai($data['tanggal_pesanan'] ?? null, $waktu_hari);
+        
         // Begin transaction untuk menyimpan ke database
         $pdo->beginTransaction();
         
-        // Insert ke tabel estimasi
+        // Insert ke tabel estimasi (tambahkan tanggal_estimasi_selesai)
         $query_estimasi = "
             INSERT INTO estimasi (
                 id_pesanan, waktu_desain, waktu_plat, waktu_total_setup,
                 waktu_mesin, waktu_qc, waktu_packing,
-                waktu_menit, waktu_jam, waktu_hari, tanggal_estimasi
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURDATE())
+                waktu_menit, waktu_jam, waktu_hari, tanggal_estimasi, tanggal_estimasi_selesai
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURDATE(), ?)
         ";
         
         $stmt_estimasi = $pdo->prepare($query_estimasi);
@@ -569,7 +574,8 @@ function hitung_estimasi_otomatis($id_pesanan, $custom_config = []) {
             $waktu_packing,
             $waktu_menit,
             $waktu_jam,
-            $waktu_hari
+            $waktu_hari,
+            $tanggal_estimasi_selesai
         ]);
         
         $id_estimasi = $pdo->lastInsertId();
@@ -758,11 +764,12 @@ function recalculate_estimasi($id_estimasi, $new_params) {
     }
     
     try {
-        // Ambil data estimasi dan pesanan terkait dengan spesifikasi lengkap
+        // Ambil data estimasi dan pesanan terkait dengan spesifikasi lengkap (tambahkan tanggal_pesanan)
         $query = "
             SELECT 
                 e.id_pesanan,
                 p.jumlah,
+                p.tanggal_pesanan,
                 d.estimasi_waktu_desain,
                 d.halaman,
                 d.jumlah_warna,
@@ -913,15 +920,19 @@ function recalculate_estimasi($id_estimasi, $new_params) {
         $waktu_jam = $waktu_menit / 60;
         $waktu_hari = $waktu_jam / 8;
         
+        // Hitung tanggal estimasi selesai
+        $tanggal_estimasi_selesai = hitung_tanggal_estimasi_selesai($data['tanggal_pesanan'] ?? null, $waktu_hari);
+        
         // Begin transaction untuk update database
         $pdo->beginTransaction();
         
-        // Update tabel estimasi
+        // Update tabel estimasi (tambahkan tanggal_estimasi_selesai)
         $query_update_estimasi = "
             UPDATE estimasi SET 
                 waktu_desain = ?, waktu_plat = ?, waktu_total_setup = ?,
                 waktu_mesin = ?, waktu_qc = ?, waktu_packing = ?,
-                waktu_menit = ?, waktu_jam = ?, waktu_hari = ?
+                waktu_menit = ?, waktu_jam = ?, waktu_hari = ?,
+                tanggal_estimasi_selesai = ?
             WHERE id_estimasi = ?
         ";
         
@@ -930,6 +941,7 @@ function recalculate_estimasi($id_estimasi, $new_params) {
             $waktu_desain, $waktu_plat, $waktu_total_setup,
             $waktu_mesin, $waktu_qc, $waktu_packing,
             $waktu_menit, $waktu_jam, $waktu_hari,
+            $tanggal_estimasi_selesai,
             $id_estimasi
         ]);
         
@@ -1246,122 +1258,65 @@ function generate_missing_estimations() {
 }
 
 /**
- * Mengambil estimasi berdasarkan filter bulan dan tahun
- * @param int $bulan Bulan filter (1-12, 0 untuk semua bulan)
- * @param int $tahun Tahun filter
- * @param int $limit Limit data
- * @param int $offset Offset data
- * @return array Status operasi dan data
+ * Helper: Hitung tanggal estimasi selesai dari tanggal_pesanan + ceil(waktu_hari)
+ * @param string|null $tanggal_pesanan format Y-m-d
+ * @param float|int|null $waktu_hari durasi dalam hari (bisa pecahan)
+ * @return string|null tanggal selesai format Y-m-d atau null jika tidak bisa dihitung
  */
-function ambil_estimasi_by_filter($bulan = 0, $tahun = 0, $limit = 0, $offset = 0) {
-    $pdo = connect_database();
-    if (!$pdo) {
-        return ['success' => false, 'message' => 'Koneksi database gagal'];
+function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
+    if (empty($tanggal_pesanan) || $waktu_hari === null) {
+        return null;
     }
-    
-    try {
-        $where_conditions = [];
-        $params = [];
-        
-        // Filter bulan jika dipilih (menggunakan tanggal_pesanan)
-        if ($bulan > 0 && $bulan <= 12) {
-            $where_conditions[] = "MONTH(p.tanggal_pesanan) = ?";
-            $params[] = $bulan;
-        }
-        
-        // Filter tahun jika dipilih (menggunakan tanggal_pesanan)
-        if ($tahun > 0) {
-            $where_conditions[] = "YEAR(p.tanggal_pesanan) = ?";
-            $params[] = $tahun;
-        }
-        
-        $where_clause = '';
-        if (!empty($where_conditions)) {
-            $where_clause = 'WHERE ' . implode(' AND ', $where_conditions);
-        }
-        
-        $query = "
-            SELECT 
-                e.*,
-                p.no as no_pesanan,
-                p.nama_pemesan,
-                p.jumlah as jumlah_pesanan,
-                p.tanggal_pesanan,
-                d.nama as nama_desain,
-                d.jenis_produk,
-                d.model_warna,
-                d.judul_produk,
-                u.nama as nama_user
-            FROM estimasi e
-            LEFT JOIN pesanan p ON e.id_pesanan = p.id_pesanan
-            LEFT JOIN desain d ON p.id_desain = d.id_desain
-            LEFT JOIN users u ON p.id_user = u.id_user
-            $where_clause
-            ORDER BY p.tanggal_pesanan DESC, e.id_estimasi DESC
-        ";
-        
-        if ($limit > 0) {
-            $query .= " LIMIT $limit OFFSET $offset";
-        }
-
-        $stmt = $pdo->prepare($query);
-        $stmt->execute($params);
-        $estimasis = $stmt->fetchAll();
-        
-        close_database($pdo);
-        
-        return [
-            'success' => true,
-            'data' => $estimasis,
-            'filter_info' => [
-                'bulan' => $bulan,
-                'tahun' => $tahun,
-                'total_data' => count($estimasis)
-            ]
-        ];
-    } catch (PDOException $e) {
-        close_database($pdo);
-        log_activity("Error ambil estimasi by filter: " . $e->getMessage(), 'ERROR');
-        return ['success' => false, 'message' => 'Gagal mengambil data estimasi'];
+    $hari = (int) ceil((float) $waktu_hari);
+    if ($hari < 0) { $hari = 0; }
+    $ts = strtotime($tanggal_pesanan . ' +' . $hari . ' day');
+    if ($ts === false) {
+        return null;
     }
+    return date('Y-m-d', $ts);
 }
 
 /**
- * Mengambil bulan & tahun paling terbaru yang memiliki data estimasi (berdasarkan tanggal_pesanan)
- * @return array ['success'=>bool, 'data'=>['bulan'=>int,'tahun'=>int]] jika ada
+ * Mengambil data estimasi untuk Gantt 1 bulan (berdasarkan tanggal_pesanan)
+ * @param int $bulan 1-12
+ * @param int $tahun 4 digit
+ * @return array { success: bool, data: array }
  */
-function ambil_bulan_tahun_terakhir_ada_estimasi() {
+function ambil_estimasi_untuk_gantt($bulan, $tahun) {
     $pdo = connect_database();
     if (!$pdo) {
         return ['success' => false, 'message' => 'Koneksi database gagal'];
     }
+
     try {
+        $conds = [];
+        $params = [];
+        if ($bulan > 0 && $bulan <= 12) { $conds[] = 'MONTH(p.tanggal_pesanan) = ?'; $params[] = $bulan; }
+        if ($tahun > 0) { $conds[] = 'YEAR(p.tanggal_pesanan) = ?'; $params[] = $tahun; }
+        $where = !empty($conds) ? ('WHERE ' . implode(' AND ', $conds)) : '';
+
         $sql = "
-            SELECT YEAR(p.tanggal_pesanan) AS tahun, MONTH(p.tanggal_pesanan) AS bulan
+            SELECT 
+                e.id_estimasi,
+                e.waktu_hari,
+                e.tanggal_estimasi_selesai,
+                p.no AS no_pesanan,
+                p.nama_pemesan,
+                p.jumlah AS jumlah_pesanan,
+                p.tanggal_pesanan
             FROM estimasi e
             LEFT JOIN pesanan p ON e.id_pesanan = p.id_pesanan
-            WHERE p.tanggal_pesanan IS NOT NULL
-            ORDER BY p.tanggal_pesanan DESC, e.id_estimasi DESC
-            LIMIT 1
+            $where
+            ORDER BY p.tanggal_pesanan ASC, e.id_estimasi ASC
         ";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute();
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->execute($params);
+        $rows = $stmt->fetchAll();
         close_database($pdo);
-        if ($row) {
-            return [
-                'success' => true,
-                'data' => [
-                    'bulan' => (int)$row['bulan'],
-                    'tahun' => (int)$row['tahun']
-                ]
-            ];
-        }
-        return ['success' => false, 'message' => 'Tidak ada data estimasi'];
+        return ['success' => true, 'data' => $rows];
     } catch (PDOException $e) {
         close_database($pdo);
-        log_activity('Error ambil bulan/tahun terakhir estimasi: ' . $e->getMessage(), 'ERROR');
-        return ['success' => false, 'message' => 'Gagal mengambil bulan/tahun terakhir'];
+        log_activity('Error ambil_estimasi_untuk_gantt: ' . $e->getMessage(), 'ERROR');
+        return ['success' => false, 'message' => 'Gagal mengambil data untuk Gantt'];
     }
 }
-?>
