@@ -123,7 +123,7 @@ function login_user($user_data) {
 function logout_user() {
     session_unset();
     session_destroy();
-    header('Location: http://localhost/penjadwalan-produksi-tmu/login.php');
+    header('Location: ../../login.php');
     exit();
 }
 
