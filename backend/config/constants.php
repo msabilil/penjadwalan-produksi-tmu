@@ -1,19 +1,25 @@
 <?php
 // Database Configuration Constants
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'penjadwalan_produksi_tmu');
-define('DB_USER', 'root'); // Sesuaikan dengan kredensial database Anda
-define('DB_PASS', ''); // Sesuaikan dengan kredensial database Anda
+define('DB_NAME', 'u760848756_penjadwalan');
+define('DB_USER', 'u760848756_tmu'); // Sesuaikan dengan kredensial database Anda
+define('DB_PASS', '!n6prJ|B'); // Sesuaikan dengan kredensial database Anda
 define('DB_CHARSET', 'utf8mb4');
+
+// define('DB_HOST', 'localhost');
+// define('DB_NAME', 'penjadwalan_produksi_tmu');
+// define('DB_USER', 'root'); // Sesuaikan dengan kredensial database Anda
+// define('DB_PASS', ''); // Sesuaikan dengan kredensial database Anda
+// define('DB_CHARSET', 'utf8mb4');
 
 // Application Constants
 define('DEFAULT_TIMEZONE', 'Asia/Jakarta');
 define('MENIT_OPERASIONAL', 480); // 8 jam = 480 menit per hari
 
 // Default Values for Estimasi Calculations
-define('WAKTU_PER_PLAT_DEFAULT', 15.0);
-define('WAKTU_MANUAL_HARDCOVER_DEFAULT', 120.0);
-define('WAKTU_STANDAR_QC_DEFAULT', 0.5);
+define('WAKTU_PER_PLAT_DEFAULT', 1.0);
+define('WAKTU_MANUAL_HARDCOVER_DEFAULT', 1.0);
+define('WAKTU_STANDAR_QC_DEFAULT', 2.0);
 define('WAKTU_STANDAR_PACKING_DEFAULT', 5.0);
 define('JUMLAH_HALAMAN_PER_PLAT_DEFAULT', 8);
 define('KAPASITAS_BOX_DEFAULT', 40);
