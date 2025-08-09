@@ -17,7 +17,7 @@ function check_authentication() {
     }
     
     if (!isset($_SESSION['user_id']) && !isset($_SESSION['id_user'])) {
-        header('Location: ../../auth/login.php');
+        header('Location: ../..login.php');
         exit;
     }
     
