@@ -472,14 +472,14 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                             <span class="date-label">Mulai</span>
                                             <span class="date-value">
                                                 <i class="fas fa-play-circle" style="color: #10b981;"></i>
-                                                <?= formatIndonesianDate($prod['tanggal_produksi']) ?>
+                                                <?= ($prod['tanggal_produksi']) ?>
                                             </span>
                                         </div>
                                         <div class="date-info">
                                             <span class="date-label">Selesai</span>
                                             <span class="date-value">
                                                 <i class="fas fa-stop-circle" style="color: #ef4444;"></i>
-                                                <?= formatIndonesianDate($prod['tanggal_produksi']) ?>
+                                                <?= formatIndonesianDate($prod['tanggal_estimasi_selesai']) ?>
                                             </span>
                                         </div>
                                     </div>
@@ -499,7 +499,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="capacity-indicator">
+                                    <!-- <div class="capacity-indicator">
                                         <?php 
                                         $capacityClass = 'capacity-high';
                                         if ($kapasitas < 30) $capacityClass = 'capacity-low';
@@ -507,7 +507,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                         ?>
                                         <div class="capacity-circle <?= $capacityClass ?>"><?= htmlspecialchars($kapasitas) ?></div>
                                         <span>unit/hari</span>
-                                    </div>
+                                    </div> -->
                                 </td>
                                 <td>
                                     <div class="capacity-indicator">
@@ -526,7 +526,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                     <div style="display: flex; align-items: center; gap: 8px;">
                                         <i class="fas fa-flag-checkered" style="color: #10b981;"></i>
                                         <span style="font-weight: 600; color: #065f46;">
-                                            <?= ($prod['tanggal_estimasi']) ?>
+                                            <?= ($prod['tanggal_pesanan']) ?>
                                         </span>
                                     </div>
                                 </td>

@@ -263,7 +263,8 @@ ob_start();
                         <th class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase">QC</th>
                         <th class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase">Packing</th>
                         <th class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase">Total (Hari)</th>
-                        <th class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase">Tanggal Estimasi</th>
+                        <th class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase">Tanggal pesanan</th>
+                        <th class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase">Estimasi Selesai</th>
                         <th class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase">Aksi</th>
                     </tr>
                 </thead>
@@ -343,10 +344,14 @@ ob_start();
                                         <?= number_format($estimasi['waktu_hari'] ?? 0, 1) ?> hari
                                     </div>
                                 </td>
+                                 <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900"><?= format_tanggal($estimasi['tanggal_pesanan'] ?? date('Y-m-d')) ?></div>
+                                </td>
                                 
                                 <!-- Tanggal -->
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900"><?= format_tanggal($estimasi['tanggal_estimasi'] ?? date('Y-m-d')) ?></div>
+                                    <div class="text-sm text-gray-900"><?= format_tanggal((new DateTime($estimasi['tanggal_pesanan'] ?? date('Y-m-d')))->modify('+'.ceil($estimasi['waktu_hari'] ?? 0).' days')->format('Y-m-d')) ?>
+</div>
                                 </td>
                                 
                                 <!-- Aksi -->
