@@ -158,10 +158,10 @@ function getJadwalProduksi(string $tanggal_mulai_produksi = null, string $filter
                         'estimate' => $tanggal_selesai_estimasi ?? $tanggal_produksi,
                         'tanggal_pesanan' => $row['tanggal_pesanan'],
                         'tanggal_estimasi_selesai' => $row['tanggal_estimasi_selesai'],
-                        'tanggal_estimasi' => 
-                            (new DateTime($row['tanggal_pesanan'] ?? date('Y-m-d')))
-                            ->modify('+' . ceil($row['waktu_hari'] ?? 0) . ' days')
-                            ->format('Y-m-d'),
+                        'tanggal_estimasi' => hitungTanggalEstimasiSelesai(
+                            $row['tanggal_pesanan'] ?? date('Y-m-d'),
+                            (float)($row['waktu_hari'] ?? 0)
+                        ),
                     ];
                 }
                 
@@ -218,4 +218,35 @@ function getJadwalProduksiHariIni(): array {
     });
     
     return array_values($jadwal_hari_ini);
+}
+
+/**
+ * Calculate estimated completion date based on order date and estimation time
+ * Formula: order_date + 1 day (preparation) + ceil(estimation_days)
+ * 
+ * @param string $tanggal_pesanan Order date in Y-m-d format
+ * @param float $waktu_hari Estimation time in days (can be decimal)
+ * @return string Estimated completion date in Y-m-d format
+ */
+function hitungTanggalEstimasiSelesai(string $tanggal_pesanan, float $waktu_hari): string {
+    // Validate input
+    if (empty($tanggal_pesanan) || $waktu_hari < 0) {
+        return date('Y-m-d'); // Return today as fallback
+    }
+    
+    // Round up the estimation days (ceil for decimal values)
+    $hari_estimasi = (int) ceil($waktu_hari);
+    
+    // Add 1 day for preparation + estimation days
+    $total_hari = 1 + $hari_estimasi;
+    
+    // Calculate completion date
+    $timestamp = strtotime($tanggal_pesanan . ' +' . $total_hari . ' days');
+    
+    // Validate timestamp
+    if ($timestamp === false) {
+        return date('Y-m-d'); // Return today as fallback
+    }
+    
+    return date('Y-m-d', $timestamp);
 }

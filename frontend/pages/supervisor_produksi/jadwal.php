@@ -1,4 +1,17 @@
 <?php
+/**
+ * Supervisor Produksi - Jadwal Page
+ * Production schedule management page for supervisor produksi role
+ */
+
+// Authentication
+require_once '../../../backend/utils/auth_helper.php';
+check_authentication();
+check_role(['supervisor produksi']);
+
+// Set page variables
+$page_title = 'Jadwal Produksi';
+
 require_once __DIR__ . '/../../../backend/functions/jadwal_functions.php';
 
 $jadwal_list = getJadwalList();
@@ -45,31 +58,20 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
     }
     return date('Y-m-d', $ts);
 }
-?>
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadwal Produksi Dashboard</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
+// Start output buffering
+ob_start();
+?>
+<style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(135deg, #eef0efff 0%, #eef0efff 100%);
-            min-height: 100vh;
-            padding: 20px;
         }
 
         .dashboard-container {
             max-width: 1600px;
             margin: 0 auto;
+            padding: 20px;
         }
 
         .header {
@@ -78,15 +80,14 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
         }
 
         .header h1 {
-            color: white;
+            color: #065f46;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 10px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .header p {
-            color: rgba(255,255,255,0.9);
+            color: #6b7280;
             font-size: 1.1rem;
         }
 
@@ -361,6 +362,10 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
         }
 
         @media (max-width: 768px) {
+            .dashboard-container {
+                padding: 10px;
+            }
+            
             .header h1 {
                 font-size: 2rem;
             }
@@ -382,37 +387,16 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                 padding: 10px 8px;
             }
         }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
     </style>
-</head>
-<body>
+
     <div class="dashboard-container">
-        <!-- Header -->
-   
-
-        <!-- Stats Cards -->
-        <div class="cards-grid">
-            <div class="stat-card">
-                <div class="icon"><i class="fas fa-tasks"></i></div>
-                <h3><?= count($jadwal_produksi) ?></h3>
-                <p>Total Item Produksi</p>
-            </div>
-            <div class="stat-card">
-                <div class="icon"><i class="fas fa-calendar-day"></i></div>
-                <h3><?= !empty($jadwal_produksi) ? max(array_column($jadwal_produksi, 'hari_produksi_ke')) : 0 ?></h3>
-                <p>Total Hari Produksi</p>
-            </div>
-            <div class="stat-card">
-                <div class="icon"><i class="fas fa-clock"></i></div>
-                <h3><?= formatIndonesianDate(date('Y-m-d')) ?></h3>
-                <p>Mulai Produksi</p>
-            </div>
-            <div class="stat-card">
-                <div class="icon"><i class="fas fa-flag-checkered"></i></div>
-                <h3><?= !empty($jadwal_produksi) ? formatIndonesianDate(calculateProductionDate(max(array_column($jadwal_produksi, 'hari_produksi_ke')))) : formatIndonesianDate(date('Y-m-d')) ?></h3>
-                <p>Target Selesai</p>
-            </div>
-        </div>
-
         <!-- Production Detail Schedule -->
         <div class="section">
             <div class="section-header">
@@ -427,6 +411,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                             <th><i class="fas fa-shopping-cart"></i> ID Pesanan</th>
                             <th><i class="fas fa-palette"></i> Nama Desain</th>
                             <th><i class="fas fa-user"></i> Nama Pemesan</th>
+                            <th><i class="fas fa-calendar-plus"></i> Tanggal Pesanan</th>
                             <th><i class="fas fa-boxes"></i> Total Jumlah</th>
                             <th><i class="fas fa-paint-brush"></i> Waktu Desain</th>
                             <th><i class="fas fa-calendar-day"></i> Hari Desain</th>
@@ -457,8 +442,16 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                 </td>
                                 <td>
                                     <div style="display: flex; align-items: center; gap: 8px;">
+                                        <i class="fas fa-calendar-plus" style="color: #10b981;"></i>
+                                        <span style="font-weight: 600; color: #065f46;">
+                                            <?= formatIndonesianDate($prod['tanggal_pesanan'] ?? date('Y-m-d')) ?>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 8px;">
                                         <i class="fas fa-cube" style="color: #10b981;"></i>
-                                        <span style="font-weight: 700; color: #065f46; font-size: 0.9rem;"><?= htmlspecialchars($prod['jumlah']) ?> unit</span>
+                                        <span style="font-weight: 700; color: #065f46; font-size: 0.9rem;"><?= htmlspecialchars($prod['jumlah']) ?> eksemplar</span>
                                     </div>
                                 </td>
                                 <td><?= htmlspecialchars($prod['waktu_desain_menit']) ?> menit</td>
@@ -469,7 +462,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                             <span class="date-label">Mulai</span>
                                             <span class="date-value">
                                                 <i class="fas fa-play-circle" style="color: #10b981;"></i>
-                                                <?= ($prod['tanggal_produksi']) ?>
+                                                <?= formatIndonesianDate($prod['tanggal_produksi']) ?>
                                             </span>
                                         </div>
                                         <div class="date-info">
@@ -489,22 +482,22 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                     $progress = min(100, $progress);
                                     ?>
                                     <div class="capacity-indicator">
-                                        <span><?= htmlspecialchars($jumlah) ?> unit</span>
+                                        <span><?= htmlspecialchars($jumlah) ?> eksemplar</span>
                                         <div class="progress-bar">
                                             <div class="progress-fill" style="width: <?= $progress ?>%;"></div>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <!-- <div class="capacity-indicator">
+                                    <div class="capacity-indicator">
                                         <?php 
                                         $capacityClass = 'capacity-high';
                                         if ($kapasitas < 30) $capacityClass = 'capacity-low';
                                         elseif ($kapasitas < 50) $capacityClass = 'capacity-medium';
                                         ?>
                                         <div class="capacity-circle <?= $capacityClass ?>"><?= htmlspecialchars($kapasitas) ?></div>
-                                        <span>unit/hari</span>
-                                    </div> -->
+                                        <span>eksemplar/hari</span>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="capacity-indicator">
@@ -515,7 +508,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                         elseif ($sisa < 25) $sisaClass = 'capacity-medium';
                                         ?>
                                         <div class="capacity-circle <?= $sisaClass ?>"><?= htmlspecialchars($sisa) ?></div>
-                                        <span>unit</span>
+                                        <span>eksemplar</span>
                                     </div>
                                 </td>
                                 <td><i class="fas fa-calendar-check"></i> Hari <?= htmlspecialchars($prod['hari_produksi_ke']) ?></td>
@@ -523,7 +516,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                     <div style="display: flex; align-items: center; gap: 8px;">
                                         <i class="fas fa-flag-checkered" style="color: #10b981;"></i>
                                         <span style="font-weight: 600; color: #065f46;">
-                                            <?= ($prod['tanggal_pesanan']) ?>
+                                            <?= formatIndonesianDate($prod['tanggal_estimasi']) ?>
                                         </span>
                                     </div>
                                 </td>
@@ -598,18 +591,11 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                 }, 500);
             });
         });
-
-        // Add CSS for ripple animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
     </script>
-</body>
-</html>
+
+<?php
+$page_content = ob_get_clean();
+
+// Include the layout
+include '../../layouts/sidebar_supervisor_produksi.php';
+?>
