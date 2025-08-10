@@ -63,63 +63,120 @@ function getJadwalProduksi(string $tanggal_mulai_produksi = null, string $filter
     $result = $conn->query($sql);
 
     $jadwal_produksi = [];
+    
+    // Tentukan tanggal referensi (tanggal pesanan paling awal)
+    $tanggal_referensi = null;
+    if ($result && $result->num_rows > 0) {
+        $result->data_seek(0);
+        while ($temp_row = $result->fetch_assoc()) {
+            if ($tanggal_referensi === null || $temp_row['tanggal_pesanan'] < $tanggal_referensi) {
+                $tanggal_referensi = $temp_row['tanggal_pesanan'];
+            }
+        }
+        $result->data_seek(0);
+    }
+    
+    if ($tanggal_referensi === null) {
+        $tanggal_referensi = date('Y-m-d');
+    }
 
-    $hari = 1;
-    $sisa_kapasitas_hari_ini = $kapasitas_perhari;
-    $last_tanggal_pesanan = null;
-
+    // Array untuk melacak kapasitas setiap hari
+    $kapasitas_harian = [];
+    
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            if ($last_tanggal_pesanan !== null && $row['tanggal_pesanan'] !== $last_tanggal_pesanan) {
-                $hari = 1;
-                $sisa_kapasitas_hari_ini = $kapasitas_perhari;
-            }
-            $last_tanggal_pesanan = $row['tanggal_pesanan'];
-
             $jumlah_sisa = $row['jumlah'];
+            
+            // Hitung kapan pesanan ini bisa mulai diproduksi
+            // 1 hari persiapan produksi + waktu desain
+            $delay_hari = ceil($row['waktu_desain'] / $menit_per_hari) + 1; // +1 hari persiapan produksi
+            $tanggal_mulai_bisa_produksi = date('Y-m-d', strtotime($row['tanggal_pesanan'] . ' +' . $delay_hari . ' days'));
+            
+            // Hitung hari minimum dari tanggal referensi
+            $hari_minimum = (int)((strtotime($tanggal_mulai_bisa_produksi) - strtotime($tanggal_referensi)) / 86400) + 1;
+            if ($hari_minimum < 1) $hari_minimum = 1;
 
-            $delay_hari = ceil($row['waktu_desain'] / $menit_per_hari);
-            if ($delay_hari > 0) {
-                $hari += $delay_hari;
-                $sisa_kapasitas_hari_ini = $kapasitas_perhari;
-            }
+            $tanggal_selesai_estimasi = null;
 
             while ($jumlah_sisa > 0) {
-                $diproduksi_hari_ini = min($jumlah_sisa, $sisa_kapasitas_hari_ini);
+                // Cari hari produksi yang tersedia mulai dari hari minimum
+                $current_hari = $hari_minimum;
+                
+                // Cari slot yang tersedia
+                while (true) {
+                    // Inisialisasi kapasitas hari jika belum ada
+                    if (!isset($kapasitas_harian[$current_hari])) {
+                        $kapasitas_harian[$current_hari] = $kapasitas_perhari;
+                    }
+                    
+                    // Jika ada kapasitas di hari ini, gunakan
+                    if ($kapasitas_harian[$current_hari] > 0) {
+                        break;
+                    }
+                    
+                    // Jika tidak ada kapasitas, coba hari berikutnya
+                    $current_hari++;
+                }
+
+                // Produksi sebanyak mungkin di hari ini
+                $diproduksi_hari_ini = min($jumlah_sisa, $kapasitas_harian[$current_hari]);
                 $jumlah_sisa -= $diproduksi_hari_ini;
-                $sisa_kapasitas_hari_ini -= $diproduksi_hari_ini;
-                $tanggal_produksi = date('Y-m-d', strtotime($last_tanggal_pesanan . ' +' . ($hari) . ' days'));
-                $estimate = date('Y-m-d', strtotime($row['tanggal_estimasi'] . " +". ceil($row['waktu_hari']) ." days"));
+                $kapasitas_harian[$current_hari] -= $diproduksi_hari_ini;
+                
+                // Hitung tanggal produksi aktual
+                $tanggal_produksi = date('Y-m-d', strtotime($tanggal_referensi . ' +' . ($current_hari - 1) . ' days'));
+                
+                // Set estimate untuk produksi terakhir
+                if ($jumlah_sisa <= 0) {
+                    $tanggal_selesai_estimasi = $tanggal_produksi;
+                }
 
-                // Create the schedule entry
-                $schedule_entry = [
-                    'id_estimasi' => $row['id_estimasi'],
-                    'id_pesanan' => $row['id_pesanan'],
-                    'waktu_desain_menit' => $row['waktu_desain'],
-                    'waktu_desain_hari' => round($row['waktu_desain'] / $menit_per_hari, 2),
-                    'jumlah_diproduksi_hari_ini' => $diproduksi_hari_ini,
-                    'kapasitas_perhari' => $kapasitas_perhari,
-                    'sisa_kapasitas_hari_ini' => $sisa_kapasitas_hari_ini,
-                    'hari_produksi_ke' => $hari,
-                    'tanggal_produksi' => $tanggal_produksi,
-                    'nama' => $row['nama'],
-                    'nama_pemesan' => $row['nama_pemesan'],
-                    'jumlah' => $row['jumlah'],
-                    'estimate' => $estimate,
-                    'tanggal_pesanan' => $row['tanggal_pesanan'],
-                    'tanggal_estimasi_selesai' => $row['tanggal_estimasi_selesai'],
-                    'tanggal_estimasi' => 
-                        (new DateTime($row['tanggal_pesanan'] ?? date('Y-m-d')))
-                        ->modify('+' . ceil($row['waktu_hari'] ?? 0) . ' days')
-                        ->format('Y-m-d'),
-                ];
+                // Filter by date if needed
+                $should_include = true;
+                if ($filter_tanggal) {
+                    $should_include = ($tanggal_produksi >= $filter_tanggal);
+                } elseif ($tanggal_mulai_produksi) {
+                    $should_include = ($tanggal_produksi >= $tanggal_mulai_produksi);
+                }
 
-                // Add to array (we'll filter later)
-                $jadwal_produksi[] = $schedule_entry;
-
-                if ($sisa_kapasitas_hari_ini <= 0 && $jumlah_sisa > 0) {
-                    $hari++;
-                    $sisa_kapasitas_hari_ini = $kapasitas_perhari;
+                if ($should_include) {
+                    $jadwal_produksi[] = [
+                        'id_estimasi' => $row['id_estimasi'],
+                        'id_pesanan' => $row['id_pesanan'],
+                        'waktu_desain_menit' => $row['waktu_desain'],
+                        'waktu_desain_hari' => round($row['waktu_desain'] / $menit_per_hari, 2),
+                        'jumlah_diproduksi_hari_ini' => $diproduksi_hari_ini,
+                        'kapasitas_perhari' => $kapasitas_perhari,
+                        'sisa_kapasitas_hari_ini' => $kapasitas_harian[$current_hari],
+                        'hari_produksi_ke' => $current_hari,
+                        'tanggal_produksi' => $tanggal_produksi,
+                        'tanggal_mulai_bisa_produksi' => $tanggal_mulai_bisa_produksi,
+                        'nama' => $row['nama'],
+                        'nama_pemesan' => $row['nama_pemesan'],
+                        'jumlah' => $row['jumlah'],
+                        'jumlah_sisa' => $jumlah_sisa,
+                        'estimate' => $tanggal_selesai_estimasi ?? $tanggal_produksi,
+                        'tanggal_pesanan' => $row['tanggal_pesanan'],
+                        'tanggal_estimasi_selesai' => $row['tanggal_estimasi_selesai'],
+                        'tanggal_estimasi' => 
+                            (new DateTime($row['tanggal_pesanan'] ?? date('Y-m-d')))
+                            ->modify('+' . ceil($row['waktu_hari'] ?? 0) . ' days')
+                            ->format('Y-m-d'),
+                    ];
+                }
+                
+                // Set hari minimum berikutnya untuk sisa produksi
+                $hari_minimum = $current_hari + 1;
+            }
+            
+            // Update semua entry pesanan ini dengan estimate yang benar
+            if (!empty($jadwal_produksi) && $tanggal_selesai_estimasi) {
+                for ($i = count($jadwal_produksi) - 1; $i >= 0; $i--) {
+                    if ($jadwal_produksi[$i]['id_pesanan'] == $row['id_pesanan']) {
+                        $jadwal_produksi[$i]['estimate'] = $tanggal_selesai_estimasi;
+                    } else {
+                        break;
+                    }
                 }
             }
         }
@@ -127,19 +184,15 @@ function getJadwalProduksi(string $tanggal_mulai_produksi = null, string $filter
 
     $conn->close();
 
-    // Filter by production date (from today or specified date onwards)
-    $filtered_jadwal = array_filter($jadwal_produksi, function($item) use ($tanggal_mulai_produksi, $filter_tanggal) {
-        // If specific filter date is provided, use it; otherwise use start date
-        $filter_date = $filter_tanggal ?? $tanggal_mulai_produksi;
-        return $item['tanggal_produksi'] >= $filter_date;
-    });
-
     // Sort by production date
-    usort($filtered_jadwal, function($a, $b) {
+    usort($jadwal_produksi, function($a, $b) {
+        if ($a['tanggal_produksi'] === $b['tanggal_produksi']) {
+            return $a['hari_produksi_ke'] - $b['hari_produksi_ke'];
+        }
         return strcmp($a['tanggal_produksi'], $b['tanggal_produksi']);
     });
 
-    return array_values($filtered_jadwal); // Re-index array
+    return $jadwal_produksi;
 }
 
 // Helper function to get schedule for a specific date range

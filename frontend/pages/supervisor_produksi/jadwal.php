@@ -62,7 +62,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            background: linear-gradient(135deg, #eef0efff 0%, #eef0efff 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -387,10 +387,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
 <body>
     <div class="dashboard-container">
         <!-- Header -->
-        <div class="header">
-            <h1><i class="fas fa-calendar-alt"></i> Dashboard Jadwal Produksi</h1>
-            <p>Kelola dan pantau jadwal produksi dengan mudah</p>
-        </div>
+   
 
         <!-- Stats Cards -->
         <div class="cards-grid">
@@ -479,7 +476,7 @@ function hitung_tanggal_estimasi_selesai($tanggal_pesanan, $waktu_hari) {
                                             <span class="date-label">Selesai</span>
                                             <span class="date-value">
                                                 <i class="fas fa-stop-circle" style="color: #ef4444;"></i>
-                                                <?= formatIndonesianDate($prod['tanggal_estimasi_selesai']) ?>
+                                                <?= formatIndonesianDate($prod['estimate']) ?>
                                             </span>
                                         </div>
                                     </div>
