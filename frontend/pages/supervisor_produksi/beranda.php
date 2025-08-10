@@ -12,81 +12,46 @@ check_role(['supervisor produksi']);
 // Set page variables
 $page_title = 'Beranda Supervisor Produksi';
 
-// Include required functions
+// Include required functions (only what's needed for basic functionality)
 require_once '../../../backend/functions/pesanan_functions.php';
 require_once '../../../backend/functions/estimasi_functions.php';
-require_once '../../../backend/functions/jadwal_functions.php';
 require_once '../../../backend/functions/helper_functions.php';
 
-// Get statistics data
-$stats = [
-    'total_pesanan' => 0,
-    'pesanan_by_status' => [],
-    'total_estimasi' => 0,
-    'estimasi_pending' => 0,
-    'estimasi_completed' => 0,
-    'total_jadwal' => 0,
-    'jadwal_by_status' => [],
-    'perlu_estimasi' => 0,
-    'terestimasi' => 0,
-    'terjadwal' => 0
-];
-
-// Order statistics
-$pesanan_stats = hitung_statistik_pesanan();
-if ($pesanan_stats['success']) {
-    $stats['total_pesanan'] = $pesanan_stats['data']['total_pesanan'] ?? 0;
-    $stats['pesanan_by_status'] = $pesanan_stats['data']['by_status'] ?? [];
-}
-
-// Estimation statistics
-$estimasi_stats = hitung_statistik_estimasi();
-if ($estimasi_stats['success']) {
-    $stats['total_estimasi'] = $estimasi_stats['data']['total_estimasi'] ?? 0;
-    $stats['estimasi_pending'] = $estimasi_stats['data']['estimasi_pending'] ?? 0;
-    $stats['estimasi_completed'] = $estimasi_stats['data']['estimasi_completed'] ?? 0;
-}
-
-// Schedule statistics
-$jadwal_stats = hitung_statistik_jadwal();
-if ($jadwal_stats['success']) {
-    $stats['total_jadwal'] = $jadwal_stats['data']['total_jadwal'] ?? 0;
-    $stats['jadwal_by_status'] = $jadwal_stats['data']['by_status'] ?? [];
-}
-
-// Get recent orders for supervisor-specific statistics
-$recent_orders_result = ambil_semua_pesanan(50, 0); // Get more data for better statistics
-$recent_orders = $recent_orders_result['success'] ? $recent_orders_result['data'] : [];
-
-// Calculate supervisor-specific statistics
-$perlu_estimasi = 0;
-$terestimasi = 0;
-$terjadwal = 0;
-
-foreach ($recent_orders as $pesanan) {
-    // TODO: Replace with actual status checking functions when implemented
-    // For now, simulate status based on some logic
-    $has_estimasi = false; // placeholder
-    $has_jadwal = false;   // placeholder
-    
-    if ($has_jadwal) {
-        $terjadwal++;
-    } elseif ($has_estimasi) {
-        $terestimasi++;
-    } else {
-        $perlu_estimasi++;
+// Recent data for tables with error handling
+try {
+    $recent_pesanan = ambil_semua_pesanan(5, 0); // limit=5, offset=0
+    if (!$recent_pesanan['success']) {
+        $recent_pesanan = ['success' => false, 'data' => []];
     }
+} catch (Exception $e) {
+    $recent_pesanan = ['success' => false, 'data' => []];
+    error_log("Error getting recent orders: " . $e->getMessage());
 }
 
-// Add supervisor-specific stats
-$stats['perlu_estimasi'] = $perlu_estimasi;
-$stats['terestimasi'] = $terestimasi;
-$stats['terjadwal'] = $terjadwal;
+try {
+    $recent_estimasi = ambil_semua_estimasi(5, 0); // limit=5, offset=0
+    if (!$recent_estimasi['success']) {
+        $recent_estimasi = ['success' => false, 'data' => []];
+    }
+} catch (Exception $e) {
+    $recent_estimasi = ['success' => false, 'data' => []];
+    error_log("Error getting recent estimations: " . $e->getMessage());
+}
 
-// Recent data for tables
-$recent_pesanan = ambil_semua_pesanan(5, 0);
-$recent_estimasi = ambil_semua_estimasi(5, 0);
-$recent_jadwal = ambil_semua_jadwal(1, 5); // page=1, limit=5
+try {
+    // Use available function instead of non-existent ambil_semua_jadwal
+    if (function_exists('getJadwalList')) {
+        $jadwal_data = getJadwalList();
+        // Limit to 5 recent items
+        $recent_jadwal_data = array_slice($jadwal_data, 0, 5);
+        $recent_jadwal = ['success' => true, 'data' => $recent_jadwal_data];
+    } else {
+        $recent_jadwal = ['success' => false, 'data' => []];
+    }
+} catch (Exception $e) {
+    $recent_jadwal = ['success' => false, 'data' => []];
+    error_log("Error getting recent schedules: " . $e->getMessage());
+}
 
 // Start output buffering
 ob_start();
@@ -97,61 +62,6 @@ ob_start();
     <div class="mb-8">
         <h1 class="text-3xl font-bold text-gray-900 mb-2">Beranda Supervisor Produksi</h1>
         <p class="text-gray-600">Selamat datang di panel supervisor produksi. Kelola estimasi dan jadwal produksi.</p>
-    </div>
-
-    <!-- Statistics Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <!-- Total Pesanan -->
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
-            <div class="flex items-center">
-                <div class="flex-shrink-0">
-                    <i class="fas fa-shopping-cart text-blue-500 text-2xl"></i>
-                </div>
-                <div class="ml-4">
-                    <p class="text-sm font-medium text-gray-500">Total Pesanan</p>
-                    <p class="text-2xl font-bold text-gray-900"><?= $stats['total_pesanan'] ?? 0 ?></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Perlu Estimasi -->
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-red-500">
-            <div class="flex items-center">
-                <div class="flex-shrink-0">
-                    <i class="fas fa-exclamation-triangle text-red-500 text-2xl"></i>
-                </div>
-                <div class="ml-4">
-                    <p class="text-sm font-medium text-gray-500">Perlu Estimasi</p>
-                    <p class="text-2xl font-bold text-gray-900"><?= $stats['perlu_estimasi'] ?? 0 ?></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Terestimasi -->
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-yellow-500">
-            <div class="flex items-center">
-                <div class="flex-shrink-0">
-                    <i class="fas fa-calculator text-yellow-500 text-2xl"></i>
-                </div>
-                <div class="ml-4">
-                    <p class="text-sm font-medium text-gray-500">Terestimasi</p>
-                    <p class="text-2xl font-bold text-gray-900"><?= $stats['terestimasi'] ?? 0 ?></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Terjadwal -->
-        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-green-500">
-            <div class="flex items-center">
-                <div class="flex-shrink-0">
-                    <i class="fas fa-calendar-check text-green-500 text-2xl"></i>
-                </div>
-                <div class="ml-4">
-                    <p class="text-sm font-medium text-gray-500">Terjadwal</p>
-                    <p class="text-2xl font-bold text-gray-900"><?= $stats['terjadwal'] ?? 0 ?></p>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Recent Data -->
